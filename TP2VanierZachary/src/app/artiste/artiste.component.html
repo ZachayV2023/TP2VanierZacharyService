@@ -1,0 +1,14 @@
+<div class="card-container">
+  <div class="card" *ngFor="let artist of artists">
+    <div class="card-body">
+      <div class="artist-name">{{ artist.name }}</div>
+      <div class="artist-image" *ngIf="artist.imageUrl">
+        <img [src]="artist.imageUrl" alt="Artist image">
+      </div>
+      <div class="artist-actions">
+        <button class="action-button">Albums</button>
+        <button class="action-button">Concerts</button>
+      </div>
+    </div>
+  </div>
+</div>

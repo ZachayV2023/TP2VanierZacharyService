@@ -1,0 +1,73 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 110px 20px;
+  padding: 10px;
+}
+
+.card {
+  flex: 1 1 calc(20% - 20px);
+  min-width: 150px;
+  max-width: calc(20% - 20px);
+  height: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.artist-name {
+  font-size: 1.2em;
+  color: white;
+}
+
+.artist-image img {
+  max-width: 200px;  /* 2x larger */
+  max-height: 200px;  /* 2x larger */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.artist-image img:hover {
+  transform: rotate(360deg);
+}
+
+
+.action-button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Gradient for Albums button */
+.action-button:first-child {
+  background: linear-gradient(to right, #ff66b2, #ff3385);
+}
+
+/* Inverted gradient for Concerts button */
+.action-button:last-child {
+  background: linear-gradient(to right, #ff3385, #ff66b2);
+}
+
+.action-button:hover {
+  opacity: 0.8;
+}
